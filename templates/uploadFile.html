@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block head %}
+
+<div class="nav-container">
+    <li class="nav"><a href="/">Home</a></li>
+    <li class="nav"><a href="/uploadFile">Upload File</a></li>
+    <li class="nav"><a href="#">Download File</a></li>
+</div>
+<hr>
+
+{% endblock %}
+{% block body %}
+<div class="submission">
+    <h1>Submission</h1>
+    <form action="/uploaded" method="POST" enctype="multipart/form-data" id="sub-form">
+        <input type="file" name="file" />
+        <br>
+        <br>
+        <input type="submit"/>
+    </form>
+</div>
+{% endblock %}
