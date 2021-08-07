@@ -12,6 +12,7 @@ body{
 .nav-container{
     display: flex;
     list-style-type: none;
+    margin: 23px;
 }
 
 .nav-container li{
@@ -27,4 +28,8 @@ body{
 
 .nav-container li:hover{
     background-color: rgb(243, 183, 218);
+}
+
+body h1{
+    text-align: center;
 }

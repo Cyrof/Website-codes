@@ -24,6 +24,10 @@ def upload_file():
 
         return render_template('uploadFile.html')
 
+@app.route('/bookNow', methods = ['GET', 'POST'])
+def calendar():
+    return render_template("./calendar/book_room.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port="8008")

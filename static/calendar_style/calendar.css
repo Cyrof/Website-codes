@@ -1,0 +1,205 @@
+/* html to margin 0 */
+* {
+    margin: 0;
+}
+
+/* set bg color */
+body{
+    background-color: rgba(165, 42, 42, 0.514);
+}
+
+/* nav bar */
+.nav-container{
+    display: flex;
+    list-style-type: none;
+    margin: 23px;
+}
+
+.nav-container li{
+    margin: auto;
+}
+
+.nav-container li a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    font-weight: bold;
+}
+
+.nav-container li:hover{
+    background-color: rgb(243, 183, 218);
+}
+
+/* call book room button */
+.book-box{
+    background-color: #f3d0d6;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    margin: 20% 45% 0 45%;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* call text inside book room button */
+.book-box p{
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+/* set hover effect */
+.book-box:hover{
+    background-color: #f8b4c1;
+}
+
+/* call book room container */
+.book-room-container{
+    height: 1000px;
+    width: 100%;
+    background-color: #f3d0d6;
+    position: absolute;
+    display: none;
+}
+
+/* call close symbol */
+#container-exit{
+    float: right;
+    color: grey;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+/* call calender container */
+.calendar-container{
+    background-color: white;
+    border: 2px solid pink;
+    height: 650px;
+    width: 500px;
+    margin: 5% auto;
+}
+
+/* call calender header */
+.calendar-header{
+    border-bottom: 2px solid pink;
+    background-color: rgb(255, 236, 239);
+    height: 16%;
+}
+
+/* call text in calender header */
+.calendar-header h1{
+    text-align: center;
+}
+
+/* call calendar */
+.calendar-btn{
+    height: 83%;
+}
+
+/* call check in check out */
+.check-in, .check-out{
+    border: 1px solid rgba(226, 224, 224, 0.836);
+    width: 200px;
+    height: 175px;
+    margin-top: 20%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: 1.5;
+    padding: 15px 0 10px;
+    cursor: pointer;
+}
+
+/* set check out position */
+.check-out{
+    float: right;
+    margin-right: 20px;
+}
+
+/* set check in position */
+.check-in{
+    float: left;
+    margin-left: 20px;
+}
+
+/* position check in and check out */
+.text{
+    display: inline-block
+}
+
+/* set day on week */
+.day-week{
+    font-weight: bold;
+}
+
+/* set day */
+.day{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+/* set month and year */
+.month{
+    float: left;
+    margin-left: 32%;
+}
+
+.year{
+    float: right;
+    margin-right: 32%;
+}
+
+.month, .year{
+    font-weight: bold;
+}
+
+/* calendar container */
+.calendar{
+    background-color: white;
+    border: 1px solid rgba(226, 224, 224, 0.836);
+    height: 350px;
+    width: 650px;
+    position: absolute;
+    bottom: 14%;
+    margin-left: 0.5%;
+    display: none;
+}
+
+/* calendar exit button */
+#calendar-exit{
+    float: right;
+    color: grey;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* set mont container position */
+.month-container{
+    margin: 23px;
+    height: 327px;
+}
+
+/* set two calendar month position */
+.month-one{
+    float: left;
+}
+
+.month-two{
+    float: right;
+}
+
+/* set th width */
+.month-container th{
+    width: 34px;
+}
+
+/* set arrow size */
+.prev, .next{
+    cursor: pointer;
+    font-size: larger;
+    font-weight: bolder;
+}

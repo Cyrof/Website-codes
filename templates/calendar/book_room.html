@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/calendar_style/calendar.css">
+    <title>Book Room</title>
+
+    <!-- nav bar -->
+    <div class="nav-container">
+        <li class="nav"><a href="/">Home</a></li>
+        <li class="nav"><a href="/uploadFile">Upload File</a></li>
+        <li class="nav"><a href="#">Download File</a></li>
+        <li class="nav"><a href="/bookNow">Calendar</a></li>
+    </div>
+    <hr>
+</head>
+
+<body>
+    <!-- book room button -->
+    <div class="book-box" onclick="showBookIn()">
+        <p>Book Now</p>
+    </div>
+
+    <!-- book room container -->
+    <div class="book-room-container">
+        <!-- calender container -->
+        <div class="calendar-container">
+            <!-- calender header -->
+            <div class="calendar-header">
+                <a id="container-exit" onclick="hideBookIn()">&#x2715;</a>
+                <h1>Insert logo here</h1>
+            </div>
+
+            <!-- calendar check in check out container -->
+            <div class="calendar-btn">
+                <!-- check in -->
+                <div class="check-in" onclick="showCalendar(1)">
+                    <span class="text">Check In</span>
+                    <div class="day-week">fri</div>
+                    <div class="day">06</div>
+                    <div class="month">aug</div>
+                    <div class="year">2021</div>
+                </div>
+
+                <!-- check out -->
+                <div class="check-out" onclick="showCalendar(1)">
+                    <span class="text">Check Out</span>
+                    <div class="day-week">sat</div>
+                    <div class="day">07</div>
+                    <div class="month">aug</div>
+                    <div class="year">2021</div>
+                </div>
+            </div>
+
+            <!-- calendar -->
+            <div class="calendar">
+                <a id="calendar-exit" onclick="showCalendar(0)">&#x2715;</a>
+
+                <!-- month container -->
+                <div class="month-container">
+                    <!-- first month calendar -->
+                    <table class="month-one">
+                        <thead>
+                            <tr class="caption">
+                                <th><a class="prev">&#60;</a></th>
+                                <th colspan="5" id="month-one">August</th>
+                                <th></th>
+                            </tr>
+                            <tr class="weekday">
+                                <th>MO</th>
+                                <th>TU</th>
+                                <th>WE</th>
+                                <th>TH</th>
+                                <th>FR</th>
+                                <th>SA</th>
+                                <th>SU</th>
+                            </tr>
+                        </thead>
+                    </table>
+
+                    <!-- second month calendar -->
+                    <table class="month-two">
+                        <thead>
+                            <tr class="caption">
+                                <th></th>
+                                <th colspan="5" id="month-two">September</th>
+                                <th><a class="next">&#62;</a></th>
+                            </tr>
+                            <tr class="weekday">
+                                <th>MO</th>
+                                <th>TU</th>
+                                <th>WE</th>
+                                <th>TH</th>
+                                <th>FR</th>
+                                <th>SA</th>
+                                <th>SU</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- import js file  -->
+    <script src="../../static/calendar_style/calendar.js"></script>
+</body>
+
+</html>
