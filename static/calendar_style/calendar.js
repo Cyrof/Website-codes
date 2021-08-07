@@ -26,12 +26,36 @@ function showCalendar(num){
     }
 }
 
-// event listener function to listen for click outside calendar
-document.addEventListener("mouseup", function(event) {
-    var obj = document.getElementsByClassName("calendar");
-    if(!obj[0].className.includes(event.target.className) && check === "block"){
-        obj[0].style.display = "none";
+function displayCalendar(){
+    var calendar = document.getElementsByClassName("calendar");
+    if (check === "none"){
+        calendar[0].style.display = "block";
+        check = "block";
+    }
+    else{
+        calendar[0].style.display = "none";
         check = "none";
-    } 
+    }
+}
+
+// event listener function to listen for click event
+document.addEventListener("mouseup", function(event) {
+    // get month container 
+    var obj = document.querySelector(".month-container");
+
+    // const array of month-container children classnames
+    const check_name = ["days", "today", "prev", "nextDates", "next"];
+
+    // get clicked target classname 
+    var e = event.target.className;
+
+    // get clicked target parent classname 
+    var e_parent = event.target.parentNode.className;
+    console.log(e_parent);
+
+    // check if click event is outside month-container 
+    if(obj.className !== e && check === "block" && !check_name.includes(e)){
+        displayCalendar();
+    }
 });
 

@@ -213,3 +213,29 @@ body{
 .days:hover{
     background-color: rgba(184, 181, 181, 0.877);
 }
+
+/* set opacity to previous dates */
+.over{
+    opacity: 0.3;
+}
+
+.over:hover{
+    background-color: rgba(221, 219, 219, 0.699);
+    cursor: default;
+}
+
+/* set border for today date */
+.today{
+    border: 2px solid rgba(21, 21, 90, 0.877);
+}
+
+/* set next months dates */
+.nextDates{
+    opacity: 0.3;
+}
+
+.nextDates:hover{
+    background-color: rgba(221, 219, 219, 0.699);
+    cursor: pointer;
+}
+
