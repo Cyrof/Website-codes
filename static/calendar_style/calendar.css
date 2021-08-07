@@ -71,6 +71,7 @@ body{
     font-weight: bold;
     text-decoration: none;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 /* call calender container */
@@ -202,4 +203,13 @@ body{
     cursor: pointer;
     font-size: larger;
     font-weight: bolder;
+}
+
+/* set hover for table cell */
+.days{
+    cursor: pointer;
+}
+
+.days:hover{
+    background-color: rgba(184, 181, 181, 0.877);
 }
