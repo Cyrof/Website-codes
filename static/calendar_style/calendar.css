@@ -131,28 +131,26 @@ body{
 }
 
 /* set day on week */
-.day-week{
+.day-week_1, .day-week_2{
     font-weight: bold;
 }
 
 /* set day */
-.day{
+.day_1, .day_2{
     font-weight: bold;
     font-size: 50px;
 }
 
 /* set month and year */
-.month{
+.month_1, .month_2{
     float: left;
     margin-left: 32%;
+    font-weight: bold;
 }
 
-.year{
+.year_1, .year_2{
     float: right;
     margin-right: 32%;
-}
-
-.month, .year{
     font-weight: bold;
 }
 
@@ -215,7 +213,7 @@ body{
 }
 
 /* set opacity to previous dates */
-.over{
+.over, .prevDates, .nextDates{
     opacity: 0.3;
 }
 
@@ -229,13 +227,24 @@ body{
     border: 2px solid rgba(21, 21, 90, 0.877);
 }
 
-/* set next months dates */
-.nextDates{
-    opacity: 0.3;
+/* set prev month dates */
+.prevDates:hover{
+    background-color: rgba(221, 219, 219, 0.699);
+    cursor: pointer;
 }
+
+/* set next months dates */
 
 .nextDates:hover{
     background-color: rgba(221, 219, 219, 0.699);
     cursor: pointer;
 }
 
+.click {
+    background-color: rgba(21, 21, 90, 0.877);
+    color: white;
+}
+
+.selected{
+    background-color: rgba(221, 219, 219, 0.699);
+}

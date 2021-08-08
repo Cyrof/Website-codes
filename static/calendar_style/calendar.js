@@ -44,7 +44,7 @@ document.addEventListener("mouseup", function(event) {
     var obj = document.querySelector(".month-container");
 
     // const array of month-container children classnames
-    const check_name = ["days", "today", "prev", "nextDates", "next", "month-one", "month-two"];
+    const check_name = ["days", "today", "prev", "nextDates", "next", "month-one", "month-two", "days today", "over", "over prevDates"];
 
     // get clicked target classname 
     var e = event.target.className;
@@ -52,8 +52,14 @@ document.addEventListener("mouseup", function(event) {
     // get clicked target parent classname 
     var e_parent = event.target.parentNode.className;
 
-    console.log(e);
+    // get clicked target id 
+    var e_id = event.target.id;
 
+    // call select 
+    select(e_id);
+
+    // call direction for arrow 
+    direction(e);
 
     // if statement to check if check in is clicked 
     if (e === "check-in" || e_parent === "check-in"){
@@ -70,3 +76,41 @@ document.addEventListener("mouseup", function(event) {
     }
 });
 
+// initialise first clicked date id
+var firstId = "";
+
+// initialise second clicked date id 
+var secondId = "";
+
+// function to select dates
+function select(e){
+    if(e.includes("days") || e.includes("nextDates") || e.includes("prevDates")){
+        // if else to check if first clicked date and second clicked date is not none 
+        if(firstId === ""){
+            firstId = e;
+        }
+        else if(secondId === ""){
+            secondId = e;
+        }
+        // get element from id and give it click class
+        var clicked = document.getElementById(e);
+        clicked.classList.add('click');
+    }
+    // if to check if firstid and secid not none 
+    if(firstId !== "" && secondId !== ""){
+        // get first num and second num from element textcontent
+        var firstNum = parseInt(document.getElementById(firstId).textContent);
+        var secNum = parseInt(document.getElementById(secondId).textContent);
+
+        // for loop to loop through number to show selected
+        for(i = firstNum + 1; i < secNum; i++){
+            var temp_id = "days_" + i.toString();
+            document.getElementById(temp_id).classList.add('selected');
+        }   
+
+        // set check in check out day
+        document.querySelector(".day_1").innerHTML = firstNum;
+        document.querySelector(".day_2").innerHTML = secNum;
+    }
+    
+}
