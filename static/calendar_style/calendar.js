@@ -44,17 +44,28 @@ document.addEventListener("mouseup", function(event) {
     var obj = document.querySelector(".month-container");
 
     // const array of month-container children classnames
-    const check_name = ["days", "today", "prev", "nextDates", "next"];
+    const check_name = ["days", "today", "prev", "nextDates", "next", "month-one", "month-two"];
 
     // get clicked target classname 
     var e = event.target.className;
 
     // get clicked target parent classname 
     var e_parent = event.target.parentNode.className;
-    console.log(e_parent);
+
+    console.log(e);
+
+
+    // if statement to check if check in is clicked 
+    if (e === "check-in" || e_parent === "check-in"){
+        displayCalendar();
+    }
+    // else if statement to check if check out is clicked 
+    else if(e === "check-out" || e_parent === "check-out"){
+        displayCalendar();
+    }
 
     // check if click event is outside month-container 
-    if(obj.className !== e && check === "block" && !check_name.includes(e)){
+    else if(!obj.className.includes(e) && check === "block" && !check_name.includes(e)){
         displayCalendar();
     }
 });
