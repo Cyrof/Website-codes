@@ -1,6 +1,8 @@
+import re
 from flask import Flask, render_template, request, url_for
 import requests
 from werkzeug.utils import secure_filename
+from python_scripts import file
 
 
 app = Flask(__name__)
@@ -8,9 +10,22 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
 
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def index():
+    if request.method == 'POST':
+        if request.values.get("user") or request.get("ps") != "":
+            username = request.values.get("user")
+            ps = request.values.get("ps")
+            file.update_json(username, ps)
+            file.file_write()
+            return render_template('index.html')
+
+        # elif request.values.get("show") == "":
+        #     file.get_data()
+        #     return render_template('index.html')
     return render_template('index.html')
+    
+
 
 @app.route('/uploadFile')
 def uploadFile():
